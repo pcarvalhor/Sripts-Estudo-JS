@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONVERSOR DE MOEDAS</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+        }
+        input#txtn1 {
+            font: normal 18pt Arial;
+            width: 200px;
+        }
+        input#txtn {
+            font: normal 18pt Arial;
+            width: 200px;
+        }
+        input#botao {
+            font: normal 18pt Arial;
+            width: 170px;
+            background: blueviolet;
+        }
+        div#res {
+            margin-top: 20px;
+        }
+        input#botao1 {
+            font: normal 18pt Arial;
+            width: 170px;
+            background: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titulo">CONVERSOR DE MOEDAS</h1>
+    <h1 id="dol">Dolar</h1>
+    <div id="d1">Digite quantos R$ voce tem.</div>
+    <input type="number" name="dinheiro" id="txtn1"> 
+    <input type="button" value="CONVERTER" id="botao" onclick="converter()">
+    <div id="res"></div>
+
+    <h1 id="dol">Euro</h1>
+    <div id="d1">Digite quantos R$ voce tem.</div>
+    <input type="number" name="dinheiro" id="txtn"> 
+    <input type="button" value="CONVERTER" id="botao" onclick="converter2()">
+    <div id="rep"></div>
+<script>
+         function converter() {
+             var tn1 = window.document.getElementById('txtn1')
+             var res = window.document.getElementById('res')
+             var n1 = Number(tn1.value)
+             var s1 = n1/5.7
+             var s = s1.toFixed(2)
+             res.innerHTML = `Com  ${n1.toLocaleString('pt-br',{style:"currency",currency:'BRL'})} voce consegue comprar <strong>${s} dolares<strong> `
+        }
+        function converter2() {
+             var tn2 = window.document.getElementById('txtn')
+             var res = window.document.getElementById('res1')
+             var n2 = Number(tn2.value)
+             var s2 = n2/6.2
+             var s3 = s2.toFixed(2)
+             rep.innerHTML = `Com  ${n2.toLocaleString('pt-br',{style:"currency",currency:'BRL'})} voce consegue comprar <strong>${s3} euros<strong> `
+        }
+    </script>
+</body>
+</html>
